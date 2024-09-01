@@ -40,10 +40,10 @@ def handle_click(index):
 
 def reset_game():
     global board, current_player
-    board = [" " for _ in range(9)]  # Скидання ігрового поля
-    current_player = "X"             # Повернення до гравця "X"
+    board = [" " for _ in range(9)] 
+    current_player = "X"             
     
-    for button in buttons:           # Очищення тексту всіх кнопок
+    for button in buttons:           
         button.config(text="")
 
 def handle_click(index):
@@ -60,7 +60,6 @@ def handle_click(index):
             messagebox.showinfo("Game Over", "Draw!")
             reset_game()
         else:
-            # Тільки після перевірки змінюємо гравця
             current_player = "O" if current_player == "X" else "X"
 
 
